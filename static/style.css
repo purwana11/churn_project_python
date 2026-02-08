@@ -1,0 +1,208 @@
+:root{
+    --bg1: #0b1220;
+    --bg2: #0b1630;
+    --glass: rgba(255,255,255,0.08);
+    --glass2: rgba(255,255,255,0.12);
+    --stroke: rgba(255,255,255,0.12);
+    --text: rgba(255,255,255,0.92);
+    --muted: rgba(255,255,255,0.65);
+  }
+  
+  body{
+    min-height: 100vh;
+    background: radial-gradient(1200px 700px at 20% 15%, #1b2a55 0%, transparent 60%),
+                radial-gradient(900px 600px at 80% 10%, #3b1b55 0%, transparent 60%),
+                linear-gradient(135deg, var(--bg1), var(--bg2));
+    color: var(--text);
+  }
+  
+  .bg-glow{
+    position: fixed;
+    inset: -40%;
+    background: radial-gradient(circle at 30% 30%, rgba(89,130,255,0.18), transparent 55%),
+                radial-gradient(circle at 70% 20%, rgba(255,92,225,0.12), transparent 55%),
+                radial-gradient(circle at 55% 70%, rgba(92,255,209,0.10), transparent 60%);
+    filter: blur(30px);
+    z-index: -1;
+    animation: floatGlow 10s ease-in-out infinite;
+  }
+  
+  @keyframes floatGlow{
+    0%,100%{ transform: translate3d(0,0,0) scale(1); }
+    50%{ transform: translate3d(2%, -1%, 0) scale(1.02); }
+  }
+  
+  .nav-glass{
+    background: rgba(10, 18, 32, 0.6) !important;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--stroke);
+  }
+  
+  .brand-dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #7aa7ff, #ff6bd6);
+    box-shadow: 0 0 18px rgba(122,167,255,0.55);
+  }
+  
+  .card-glass{
+    background: var(--glass);
+    border: 1px solid var(--stroke);
+    border-radius: 20px;
+    box-shadow: 0 18px 55px rgba(0,0,0,0.25);
+  }
+  
+  /* Background lebih terang untuk card input data agar teks hitam terlihat */
+  .card-input-data{
+    background: rgba(255,255,255,0.9) !important;
+    backdrop-filter: blur(10px);
+  }
+  
+  .btn-raise{
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .btn-raise:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  }
+  
+  .badge-soft{
+    background: rgba(255,255,255,0.10);
+    border: 1px solid var(--stroke);
+    color: var(--text);
+  }
+  .badge-soft-2{
+    background: rgba(92,255,209,0.10);
+    border: 1px solid rgba(92,255,209,0.20);
+    color: rgba(255,255,255,0.90);
+  }
+  .badge-success-soft{
+    background: rgba(92,255,209,0.16);
+    border: 1px solid rgba(92,255,209,0.25);
+    color: rgba(255,255,255,0.92);
+  }
+  .badge-danger-soft{
+    background: rgba(255,107,214,0.16);
+    border: 1px solid rgba(255,107,214,0.25);
+    color: rgba(255,255,255,0.92);
+  }
+  
+  .code-pill{
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid var(--stroke);
+    color: rgba(255,255,255,0.85);
+  }
+  
+  .form-control{
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.16) !important;
+    color: var(--text) !important;
+  }
+  .form-control::placeholder{
+    color: rgba(255,255,255,0.45);
+  }
+  .form-control:focus{
+    border-color: rgba(122,167,255,0.7) !important;
+    box-shadow: 0 0 0 .25rem rgba(122,167,255,0.18) !important;
+  }
+  
+  /* Styling untuk form-select agar teks yang dipilih terlihat dengan warna hitam */
+  .form-select{
+    background-color: rgba(255,255,255,0.95) !important;
+    border: 1px solid rgba(255,255,255,0.16) !important;
+    color: #000000 !important;
+  }
+  .form-select option{
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 0.5rem;
+  }
+  .form-select option:checked,
+  .form-select option:focus,
+  .form-select option:hover{
+    background-color: #f0f0f0 !important;
+    color: #000000 !important;
+  }
+  .form-select:focus{
+    background-color: #ffffff !important;
+    border-color: rgba(122,167,255,0.7) !important;
+    box-shadow: 0 0 0 .25rem rgba(122,167,255,0.18) !important;
+    color: #000000 !important;
+  }
+  .form-select:not(:disabled):not([readonly]){
+    background-color: rgba(255,255,255,0.95) !important;
+    color: #000000 !important;
+  }
+  
+  .progress-glass{
+    height: 12px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 999px;
+  }
+  .progress-bar{
+    border-radius: 999px;
+    background: linear-gradient(90deg, #7aa7ff, #ff6bd6);
+  }
+  
+  .fade-in-up{
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp .55s ease forwards;
+  }
+  .fade-in-up.delay-1{ animation-delay: .12s; }
+  
+  @keyframes fadeInUp{
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .shimmer-line{
+    height: 10px;
+    width: 160px;
+    border-radius: 999px;
+    background: linear-gradient(90deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.20),
+      rgba(255,255,255,0.08)
+    );
+    background-size: 250% 100%;
+    animation: shimmer 2.2s infinite;
+  }
+  @keyframes shimmer{
+    0%{ background-position: 0% 0; }
+    100%{ background-position: 250% 0; }
+  }
+  
+  /* Styling untuk tabel input data */
+  .input-data-table{
+    color: #000000 !important;
+  }
+  .input-data-table td{
+    padding: 0.75rem 0.5rem !important;
+    vertical-align: middle;
+    color: #000000 !important;
+  }
+  .input-data-table .input-label{
+    color: #333333 !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .input-data-table .input-value{
+    color: #000000 !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .input-data-table tbody tr{
+    border-bottom: 1px solid rgba(0,0,0,0.15) !important;
+  }
+  .input-data-table tbody tr:last-child{
+    border-bottom: none !important;
+  }
+  .input-data-table tbody tr:hover{
+    background-color: rgba(255,255,255,0.1);
+  }
+  

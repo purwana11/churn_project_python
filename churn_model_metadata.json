@@ -1,0 +1,30 @@
+{
+  "model_name": "XGBoost (Advanced)",
+  "threshold": 0.5499999999999999,
+  "feature_columns": [
+    "CreditScore",
+    "Geography",
+    "Gender",
+    "Age",
+    "Tenure",
+    "Balance",
+    "NumOfProducts",
+    "HasCrCard",
+    "IsActiveMember",
+    "EstimatedSalary"
+  ],
+  "categorical_features": [
+    "Geography",
+    "Gender"
+  ],
+  "numeric_features": [
+    "CreditScore",
+    "Age",
+    "Tenure",
+    "Balance",
+    "NumOfProducts",
+    "HasCrCard",
+    "IsActiveMember",
+    "EstimatedSalary"
+  ]
+}
